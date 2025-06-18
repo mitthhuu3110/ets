@@ -53,19 +53,6 @@ The ETS application follows a layered architecture, separating concerns for main
 
 ---
 
-### Architecture Diagram
-
-```mermaid
-flowchart TD
-    A[Client (Web/Mobile/Postman)] -->|HTTP/JSON| B[Spring Boot REST API]
-    B -->|JPA| C[(PostgreSQL Database)]
-    B --> D[Service Layer]
-    D --> E[Repository Layer]
-    B -.->|Logs/Monitoring| F[Monitoring/Logging Stack]
-    B -.->|CI/CD| G[Jenkins Pipeline]
-    B -.->|Reverse Proxy| H[Nginx/SSL]
-````
-
 ## Technology Stack
 
 - Java 17+
